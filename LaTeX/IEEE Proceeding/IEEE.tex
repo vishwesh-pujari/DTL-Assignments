@@ -1,0 +1,438 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{float}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{How Can Artificial Intelligence Help With Space
+Missions - A Case Study: Computational
+Intelligence-Assisted Design of Space Tether for
+Payload Orbital Transfer Under Uncertainties*\\
+{\footnotesize \textsuperscript{*}This work was supported in part by the National Natural Science Foundation of China under Grant 51875090, and in part by the Natural
+Science Foundation of Guangdong Province under Grant 2018A030313320.
+should not be used}
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} XIANLIN REN 1}
+\IEEEauthorblockA{\textit{Member, IEEE} \\
+}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} YI CHEN}
+\IEEEauthorblockA{\textit{Senior Member, IEEE} \\
+}
+
+}
+
+\maketitle
+
+\begin{abstract}
+In the era of artificial intelligence (AI), many industry sectors, including space exploration,
+have experienced a shift in the way business is conducted due to the widespread use of AI technologies.
+In the past few years, AI has become a key tool used to explore the universe in space missions. In this paper,
+a multi-objective optimal design for payload orbital transfer involving space tethers is proposed based on
+a computational intelligence-assisted design framework with the artificial wolf pack algorithm (AWPA).
+Enlightened by the social behaviors of a wolf pack and its swarm intelligence, the AWPA is utilized for
+optimization problems in which a logsig function randomly obtains assignments for parents and offspring.
+Swarmwolf , a simulation toolbox with given initial conditions. The proposed method effectively performs
+optimization tasks based on index of evolutionary pathway trends, has been defined to demonstrate the
+optimizing process. The results show that the proposed approach works expeditiously for the optimization
+of space tether model and its application.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Artificial intelligence, artificial wolf-pack algorithm, computational intelligence assisted
+design, evolutionary pathway, multi-objective optimization, payload orbital transfer, space tether.
+\end{IEEEkeywords}
+
+\section{Introduction}
+Reflecting one of the most innovative activities, artificial
+intelligence (AI) has become essential to the global economy,
+and its positive effects on society in the context of efficiency
+are immeasurable and emerging in our daily lives. According
+to an analysis by PwC, by 2030, AI could add £232BN to
+the Gross Domestic Product of the United Kingdom, which
+is approximately 10% higher than the current level. In the
+past few years, AI has become a key tool in space activities
+and the exploration of the universe, and it can be utilized
+for space communications, navigation, big data analysis,
+autonomy evaluation, decision support for spacecraft system design [3], space mission operations [4], [5], planetary
+defense, mapping the moon [6], space exploration [7] and
+The associate editor coordinating the review of this manuscript and
+approving it for publication was Zhonglai Wang .
+universe exploration [8], among other tasks. Most previous
+works focused on space structure design, communications or
+flight simulations, and few have addressed the ‘space tether’.
+The original space tether concept came from the ‘space
+elevator’, which was proposed by a Russian scientist in 1895.
+A space tether is a type of lengthy cable ranging from a
+few hundred meters to many kilometers. The cable makes
+use of a few bundles of thin strands of high-strength fiber
+to couple spacecraft to every different or other masses, and
+it provides a mechanical connection that allows the transfer
+of energy and momentum from one object to the other. Space
+tethers can be utilised in many applications, collectively with
+studies of plasma physics and electrical science in the Earth’s
+upper atmosphere, the orbiting or deorbiting of space vehicles, payload transfer, inter-planetary propulsion, and specialised missions, such as asteroid engagement or, in severe
+form, as a well-publicized space elevator development of space technology, space tethers are broadly
+used in the exploration of Mars, or even deep space missions [2]. Recently, a few companies, e.g., Google and
+SpaceX, have been working on space projects related to
+space elevators, and these projects are mainly supported by
+developed AI tools.
+To fill the current research gap, this paper utilizes an
+AI-driven design tool for payload orbital transfer via a
+space tether using a computational intelligence-assisted
+design (CIAD) framework [9], [10], [22], [28]. An intelligent
+design system is created with the artificial wolf pack algorithm (AWPA) [24], and this gadget presents three practical
+advantages: (1)the mobilisation and flexibility of computing
+resources; (2) the embedment of a set of AI algorithms,
+and (3) the reducing computational cost as a design objective. In this research, a symmetrical motorized momentum space tether (MMET) with a payload at each end
+experiences centripetal acceleration when rotating about a
+facility [1], [11], [12].
+In the last a few decades, the studies on the nature-inspired
+AI algorithms have been widely performed, such as the family of genetic algorithms (GAs) [25], which were inspired
+by the Darwinian theory and the concept of survival of the
+fittest; swarm intelligence and algorithms, including the ant
+colony optimization in 1992, the particle swarm optimization (PSO) in 1995, the Artificial bee colony in 1996, and
+the firefly swarm algorithm (Firefly) in 2013 [27], and others, based on the principles of natural phenomena, which
+reproduce the social intelligence of the behaviour of an
+animal or insect swarm. As one of the most broadly used
+evolutionary algorithms, the GAs provide a near-optimal
+solution for practical problems with massive numbers of
+variables and constraints, in which, the best possible control
+parameters, including the size of population, the crossover
+operation rate and the mutation operation rate, are difficult to determine. The typical motivation behind developing nature-based algorithms is to effectively and efficiently
+solve different optimization problems. During Earth’s natural
+development, it is assumed that the behavior of nature is
+usually optimal. In this research, the AWPA, a newly proposed nature-inspired algorithm, is utilised to achieve global
+solutions for space tether’s continuous nonlinear functions in
+a space mission, with low computational effort and excessive
+consistency.
+The remaining sections of this work are organized as
+follows. Section II introduces the social dynamic behaviors of a WP in the natural world, then it gives the AWPA
+algorithm with logsig randomness, which was stimulated by
+using the WP’s swarm intelligence of its social behaviors,
+as added in Section II. To investigate the optimization performance, Section III defines the fashion indices for evolutionary optimization, which includes three pairs of trend indices.
+Section V offers the modeling of payload transfer the use
+of a house tether. Section VI discusses multi-objective optimization and fitness functions based on the relevant criteria.
+Section VII presents the empirical outcomes and a discussion 
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{A-WPs-social-behaviors.png}
+    \caption{A WP's social behaviors}
+\end{minipage}
+\end{figure}
+
+\section{WOLF PACK’S SOCIAL MECHANISM AND ARTIFICIAL
+WOLF PACK ALGORITHM}
+
+Wolves are gregarious animals who mostly live in packs.
+A wolf pack (WP) is formed when a male ($\alpha$) and a female
+wolf ($\beta$) meet and continue to be together as a mated pair.
+The pair establishes a territory to settle and increase cubs in
+most years. The cubs stay within the WP until they are old
+enough to leave home, generally when they are 3 years old,
+and they can then start a WP of their own. Thus, the social
+structure of a WP consists of a permanent core of a $\alpha + \beta$
+pair plus their continuously dispersing offspring. A WP has a
+very strict stage of hierarchy that need to be adhered to by all
+the members of the pack, and it supports the WP to survive.
+For their social intelligence, wolves are considered one of
+the smartest animals in nature, and they have developed the
+potential to live on in a vast vary of surroundings, which
+varies from the wilderness to humid swamps to the Arctic
+region with temperatures of $-40$ and bitter winds.
+Basically, a WP has 3 types of behaviors in their social
+activities, namely, ‘scouting’, ‘calling’ and ‘besieging’,
+as shown in Figure 1, usually in a WP, an $\alpha$ male wolf
+is the leader wolf who is in the decision-making position
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{The-workflow-of-artificial-wolf-pack-algorithm.png}
+    \caption{The workflow of ar tificial wolf pack algorithm.}
+\end{minipage}
+\end{figure}
+
+and is able to command all the other wolves to carry out
+suitable actions. Specifically, scouting: the scout group of
+wolves are deployed to explore unknown areas; calling: when
+the scout wolves have spotted and positioned the prey in an
+area, they will report this information to the $\alpha$ wolf and also
+communicate with other wolves by their howling; besieging:
+after the $\alpha$ wolf confirms the prey information and will be
+leading the WP toward the scout wolves, starting the grey
+hunting and capturing actions in the so-called the besieging
+area.
+Inspired by the swarm intelligence of a WP’s social behaviors, an artificial intelligent algorithm, the Artificial Wolf
+Pack Algorithm (AWPA) is proposed by implementing three
+social behaviors of a WP, in which, there are six steps include:
+(1) initialization of all the variables; (2) the behavior selection
+from three social behaviors with the logsig() randomness;
+(3) the operation of scouting behavior; (4) the operation of
+calling behavior; (5) the operation of besieging behavior and
+(6) the bulletin step to summarise the results.
+Without loss of generality, in this section, Sj is considered the status of any artificial wolf with status j.
+The AWPA workflow is given in Figure 2. As shown in
+Equation (1), when performing the AWPA with a pre-defined
+function WPM×N , it first simulates the behavior of an individual artificial wolf (AW, as Sij), where M is the population and
+N is the number of individuals in a WP. Each AW searches
+for the local optimal solution and passes its result to the self-organized WP and so as to obtain the optimal global
+solution.
+As also shown in Figure 3, it gives the pseudocode implementation of the AWPA algorithm, in which, the ‘maxgeneration’ parameter is set as the terminal condition of the
+AWPA optimisation.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{AWPA-Pseudo-Code_Q320.jpg}
+    \caption{AWPA Pseudo Code}
+\end{minipage}
+\end{figure}
+
+(1) Initialization: in this step, all the variables and parameters are set to the pre-defined values, in a case, population =
+50, max generation = 200, etc., and the simulation program
+prepare for the subsequent steps
+
+\begin{align}
+WP_{MXN} = \begin{bmatrix} 
+S_{11} & S_{12} & S_{13} \ldots\ &S_{1N} \\
+S_{21} & S_{22} & S_{23} \ldots\ &S_{2N}\\
+S_{31} & S_{32} & S_{33} \ldots\ &S_{3N} \\
+S_{M1} & S_{M2} & S_{M3} \ldots\ &S_{MN}
+\end{bmatrix}
+\quad
+\end{align}\\
+(2) Behavior Selection: In the ‘behavior selection’, there
+are three types of ‘states’ to indicate three different types of
+behaviors of a WP, that is, ‘scouting’, ‘calling’ and ‘besieging’, in which, the ‘scouting’ state is set as the default state
+or initial behavior of each WP.
+Depending on the companion’s number and the visual conditions, the prey density in the hunting region can be defined
+in Equation (2).\\
+
+\begin{align} 
+visual(t) = logsig\left(\frac{\frac{T}{2}- t}{k}\right) x random(t)
+\end{align}
+in which, 
+
+\begin{itemize}
+    \item logsig() is a logarithmic sigmoid transfer function;
+    \item T is the maximum number of iterations;
+    \item t is the current iteration number;
+    \item k changes the slope of the logsig() function;
+    \item random() is a random value within the range of (0,1).
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{The-Euclidean-distance-between-the-AWi-th-and-AWj-th-and-states-updating.png}
+    \caption{The Euclidean distance between the $AWi^{th}$ and $AWj^{th}$ and states updating}
+\end{minipage}
+\end{figure}
+
+(3) Scouting: For an AW individual k in a WP, let's define
+S as the finite state set, and there are states 1 to M that an AW
+can perform, as given in Equation (3).
+Within the AW's visual field, let's define $S_{(*)i}$ as the cur-rent state of an AW and $S_{(*)i}$ as the next state. Specifically,
+an AW moves from its current state $S_{(*)i}$ to the next state $S_{(*)i}$
+randomly, and keep checking the state updating conditions,
+as stated in Equations (5) and (4), where $\epsilon$ is a random
+movement factor, $\delta$ is the iteration step, and $\nu$ is the visual
+constant of the AW. For a given AW, the prey density is
+defined as z D f (S), in which, z is the fitness function,
+z i and z j are the prey density in the state $S_{(*)i}$ and $S_{(*)i}$,
+respectively.
+
+
+\section{THREE PAIRS OF TREND INDICES}
+
+To evaluate the performance of the optimization process, and
+benchmarks for the AWPA algorithm, three pairs of trend
+indices are introduced in this section:
+1) the trend index of moving mean of the average pre-cision (mmAP) and the index of moving mean of the
+standard deviation (mmSTD), as given in equations (13)
+and (14), respectively;
+The trend index of mmAP is dened as a moving aver-age score of the MEAN value of a vector fj, as given in
+equation (13), in which $i = 1, 2, \ldots j,\ldots p$, p is the
+size of the dataset's population, MEAN is the average
+function.
+The trend index of mmSTD is a moving average score
+of the STD value of vector fj, as given in equation (14),
+in which STD is the standard deviation function.
+Both indices of mmAP and mmSTD are employed
+to assess the short-term fluctuations by recording the
+long-term trend throughout their evolutionary process.
+2) the trend index of `moving max of the average pre-cision' (mmaxAP) and the index of `moving max of
+the standard deviation' (mmaxSTD), as given in equa-tions (15) and (16), respectively.
+
+\section{EVOLUTIONARY PATHWAY}
+As shown in Figure 5, from top to bottom, the solid lines
+are the trend indices of mmaxAP, mmAP and mminAP of a
+fitness function in a vector fj, as given in equations (15), (13)
+and (17), respectively.
+The dashed lines are the boundaries of $mmaxAP +
+mmaxSTD$, $mmAP + mmSTD$ and $mminAP + mminSTD$
+values for each vector fj, as defined in Equations (16), (14)
+and (18), which illustrate the tracking shape of the evolution-ary pathway for the optimization process, generation versus
+fitness f in this case, as the upper and lower boundaries.
+
+\section{PAYLOAD TRANSFER USING SPACE TETHER UNDER
+UNCERTAINTIES}
+As illustrated in Figure 6, there are two sub-figures labelled
+as (a) and (b), which describes the orbital elements of payload
+release and transfer using space tether.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{Orbital-elements-of-payload-release-and-transfer_Q320.jpg}
+    \caption{Orbital elements of payload release and transfer}
+\end{minipage}
+\end{figure}
+\begin{itemize}
+    \item Figure 6 (a), it demonstrates the payload transfer from a
+3D perspective.
+    \item Figure 6 (b), it describes the parameters for modeling of
+the payload transfer from a 2D perspective.
+\end{itemize}
+Generally, the space tether's payload transfer is in a low
+Earth orbit, where the space tether obtains rising angular
+velocity than it requires to remain in the orbit, however, it does
+not comprise sufficient energy to escape from the Earth's
+gravity field.
+During payload transferring, a robotic space tether, con-sists of a few modules including: the upper payload, the lower
+payload and a center of mass (COM), is in a low Earth
+orbit, where the upper payload can be released from the
+spinning space tether with enough angular momentum, which
+is aligned along the local gravity vector.
+After the release operation, the upper payload will enter an
+elliptical orbit (named as `OU'), as shown in both sub-figures
+(a) and (b), in which the point A (the upper perigee of `OU')
+is the release point. Then, half of moving on the elliptical orbit
+later, the upper payload reaches the point B (the upper apogee
+of `OU'), where is further from the Earth than it was at release
+point.
+On the contrary, the lower payload will not have enough
+energy to maintain in its circular orbit after the release oper-ation, and it will enter into another elliptical orbit (named
+as `LU'). Upon reaching the point D (the perigee of `LU'),
+the lower payload is closer to the Earth than it was at the
+release point C (the apogee of `LU').
+Finishing above actions, the upper and lower masses of
+payloads are released from the spinning space tether, entering
+a raised orbit and lowered orbit, respectively.
+All the environmental effects that can influence the
+space tether modelling are assumed to be negligible in the
+space tether's modelling context, including solar radiation,
+aerodynamic drag, electrodynamic forces and no frictional
+losses.
+To build a model for the payload transfer, a set of parame-ters are defined here,
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{Optimisation-of-Space-Tether-for-Payload-Orbital-Transfer-via-CIAD-Framework.png}
+    \caption{Optimisation of Space Tether for Payload Orbital Transfer via CIAD Framework}
+\end{minipage}
+\end{figure}
+
+\section{FITNESS FUNCTIONS AND OPTIMAL DESIGN
+CRITERIA}
+As shown in Figure 7, the multi-objective optimization pro-cess of the space tether for payload orbital transfer includes
+four steps, as listed below.
+\begin{enumerate}
+    \item Pre-processing: This step includes the dynamic mod-eling of the space tether for payload orbital transfer as given in Section V;
+    \item The optimal design given by the computational intelli-gence approaches via the integrated solver;
+    \item Three design objectives. The MMET payload transfer
+and design strength problems are defined as three conflicting objectives that need to be balanced in the opti-mization study, in which the practical multi-objective
+problem of tether payload transfer can be expressed as
+follows [20]
+    
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{FPR Flowchar.png}
+    \caption{FPR Flowchart}
+\end{minipage}
+\end{figure}
+
+\section{OPTIMAL DESIGN FOR ORBITAL PAYLOAD
+TRANSFER}
+The computers used for the simulations have Intel Core
+i7-5500U 2.4 GHz dual-core processors with the Win-dows 7 flagship x64 service pack 1, 8.0-GB 1600-MHz
+dual-channel DDR3L SDRAM, and MATLAB R2010a.
+Table 1 lists the parameters for the optimization
+process, in which, the termination condition is set to`
+max-generation D100' for each loop of evolutionary opti-misation; the try variable is 5; the population is 50; the total
+number of tests is 100; the iteration step is 0.001; the initial
+visual value is 2.5; the crowd value is 0.618.
+Table 2 gives the optimal combinations (MEAN STD) of
+z and the design variables (x1;x2;x3), and the results indicate
+that the overall performance of the AWPA in the optimal design of a space tether for orbital payload transfer is better
+than that of the algorithm and GA.
+Figures 9 to 12 give the max, mean and min fitness curves,
+which show that the AWPA converge near generation 30.
+Figure 9, Figure 10 and Figure 11 show the mmaxAP
++ mmaxSTD, mmAP + mmSTD and mminAP + mminSTD
+fitness curves over the full simulation period, respectively.
+Figure 12 illustrates the evolutionary pathway of the opti-mization process of the optimal design for space tether pay-load transfer using the mmaxAP + mmaxSTD, mmAP +
+mmSTD and mminAP + mminSTD fitness curves with their
+upper and lower boundaries.
+Obviously, the fitness values increases very quickly, and
+it reaches a plateau from generations 1 to 250. All curves
+converge from generation 280 to 300, which reflects the
+high efficiency of the proposed AWPA for this space tether
+payload transfer application.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.4\textwidth}
+    \includegraphics[width=1\textwidth]{Evolutionary pathway of space tether payload transfer.png}
+    \caption{Evolutionary pathway of space tether payload transfer}
+\end{minipage}
+\end{figure}
+
+\section{CONCLUSIONS AND FUTURE WORKS}
+In this study, the efficiency of payload transfer considering
+the perigee altitude loss  and tether stress  are defined for
+space tether payload orbital transfer, and three fitness func-tions are obtained using the newly devised trend indices for the multi-objective problem. Then, optimization is performed
+with the newly developed multi-objective AWPA.
+The following conclusions can be drawn with the results
+and discussions above
+
+\begin{itemize}
+    \item The optimal design using the multi-objective AWPA
+exhibits good agreement with previous results.
+    \item The evolutionary trends are accurately rejected by the
+three defined pairs of trend indices with variable uncer-tainty and tolerance levels
+    \item the dynamic evolutionary behaviors of three pairs of
+trend indices are obtained and considered in optimiza-tion.
+    \item the fast Pareto-optimal solution recommendation
+method is introduced, and a clear recommendation list
+is established for decision making.
+    \item further studies on the implementation of experimental
+verification and validation for the space tether and space
+robotic and autonomous system;
+    \item the development of the operational strategy of high effi-cient payload transfer using space tether systems;
+    \item the studies on the high efficiency and reliability design
+for the key components of the space tethers;
+    \item to develop a computational intelligence assisted design
+software package for industrial design and manufac-ture, as one of the components of cyber-physical sys-tem (CPS) for industry 4.0 applications in future space
+projects, using cutting-edge technologies, such as: `dig-ital twin' and internet of things;
+
+\end{itemize}
+
+
+\end{document}

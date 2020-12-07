@@ -1,0 +1,209 @@
+GET http://localhost:8080/tienda1/index.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=EA414B3E327DED6875848530C864BD8F
+Connection: close
+
+
+GET http://localhost:8080/tienda1/publico/anadir.jsp?id=1&nombre=Jam%F3n+Ib%E9rico&precio=39&cantidad=41&B1=A%F1adir+al+carrito HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip,x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=54E25FF4B7F0E4E855B112F882E9EEA5
+Connection: close
+
+
+POST http://localhost:8080/tienda1/publico/anadir.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=788887A0F479749C4CEEA1E268B4A501
+Content-Type: application/x-www-form-urlencoded
+Connection: close
+Content-Length: 74
+
+id=1&nombre=Jam%F3n+Ib%E9rico&precio=39&cantidad=41&B1=A%F1adir+al+carrito
+
+GET http://localhost:8080/tienda1/publico/autenticar.jsp?modo=entrar&login=caria&pwd=egipciaca&remember=off&B1=Entrar HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=94ECD5EE8EF7EFE4BB26C701B150ED7B
+Connection: close
+
+
+POST http://localhost:8080/tienda1/publico/autenticar.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=23391DBBADEC19FE01E02D201F278C6A
+Content-Type: application/x-www-form-urlencoded
+Connection: close
+Content-Length: 60
+
+modo=entrar&login=caria&pwd=egipciaca&remember=off&B1=Entrar
+
+GET http://localhost:8080/tienda1/publico/caracteristicas.jsp?id=2 HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=98D39BB41546D2A0C7E89F02B01A97F8
+Connection: close
+
+
+POST http://localhost:8080/tienda1/publico/caracteristicas.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=FED1AE17BB73232DE364A4DF3B701615
+Content-Type: application/x-www-form-urlencoded
+Connection: close
+Content-Length: 4
+
+id=2
+
+GET http://localhost:8080/tienda1/publico/carrito.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=CBAFAE97F1CE14D899201A5E2C5BE9BD
+Connection: close
+
+
+GET http://localhost:8080/tienda1/publico/entrar.jsp?errorMsg=Credenciales+incorrectas HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=95C9B50C46067E48242868D8C73A2000
+Connection: close
+
+
+POST http://localhost:8080/tienda1/publico/entrar.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=3ECD617061D9FB70E5BA4F9114F08620
+Content-Type: application/x-www-form-urlencoded
+Connection: close
+Content-Length: 33
+
+errorMsg=Credenciales+incorrectas
+
+GET http://localhost:8080/tienda1/publico/miembros.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=A5748BB778BF075E0902B57C33AE922B
+Connection: close
+
+
+GET http://localhost:8080/tienda1/publico/pagar.jsp?modo=insertar&precio=3230&B1=Pasar+por+caja HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=75788CAE70E544A2E63D43AAFDDF4DE9
+Connection: close
+
+
+POST http://localhost:8080/tienda1/publico/pagar.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=F4708896C1E181DD7A89501CCBCC46CF
+Content-Type: application/x-www-form-urlencoded
+Connection: close
+Content-Length: 43
+
+modo=insertar&precio=3230&B1=Pasar+por+caja
+
+GET http://localhost:8080/tienda1/publico/productos.jsp HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=2FD23C615C78447F7206BA5F0500564C
+Connection: close
+
+
+GET http://localhost:8080/tienda1/publico/registro.jsp?modo=registro&login=minthorn&password=ahorquillado&nombre=Isra%E9l&apellidos=Luna+Barberan&email=pouyet%40mcrspain.mh&dni=83073375C&direccion=Calle+Pamplona%2C+26+&ciudad=Arrankudiaga&cp=49740&provincia=Huesca&ntc=2656905158370014&B1=Registrar HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.8 (like Gecko)
+Pragma: no-cache
+Cache-control: no-cache
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Accept-Encoding: x-gzip, x-deflate, gzip, deflate
+Accept-Charset: utf-8, utf-8;q=0.5, *;q=0.5
+Accept-Language: en
+Host: localhost:8080
+Cookie: JSESSIONID=EB0F1BE74F65CBFB341BBBB5FCA1EF7C
+Connection: close
+
